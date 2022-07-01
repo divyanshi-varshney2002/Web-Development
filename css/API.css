@@ -1,0 +1,41 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(84, 198, 243);
+}
+
+header {
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    padding: 5px 5px;
+}
+
+main {
+    width: 60%;
+    height: 80vh;
+    margin: auto;
+    background-color: darkorange;
+    border-radius: 10px;
+}
+
+main h1 {
+    color: purple;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+main h2,label {
+    padding: 0px 30px;
+    color: white;
+    font-size: large;
+    font-weight: 800;
+}
+
+main h2 span {
+    padding-left: 20px;
+    color: black;
+}

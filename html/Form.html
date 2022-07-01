@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>collect user data</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+        .container{
+            width: 700px;
+            /* text-align: justify; */
+            border: 3px solid red;
+            border-radius: 50px;
+            background:linear-gradient(pink ,yellow,lightblue,gray);
+            margin: 50px auto;
+        }
+        h2 {
+            text-align: center;
+        }
+
+        .labels {
+            margin-left: 30px;
+            margin-right: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 300px;
+            height: 30px;
+            border: 2px solid blue;
+            outline: 0px;
+            border-radius: 20px;
+            background-color: white;
+            border-bottom: 2px solid blue;
+            margin-bottom: 20px;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            margin: 20px 20px;
+            width: 150px;
+            height: 40px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px 2px gray;
+            background: rgb(54, 137, 200);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2><u>Student Registration</u></h2>
+        <form action="" method="post">
+            <!-- get=field visible in address bar and post=send data at server method -->
+            <!-- form element:collect data -->
+            <div>
+                <label for="" class="labels">Enter first name:</label>
+                <input type="text" placeholder="Enter your first name" name="fname" required />
+            </div>
+            
+            <div>
+                <label for="" class="labels">Enter last name:</label>
+                <input type="text" placeholder="Enter your last name" name="lname" required />
+            </div>
+            
+            <div>
+                <label for="" class="labels">Enter password:</label>
+                <input type="password" placeholder="Enter your password" name="pwd" required />
+            </div>
+            <br>
+            <div>
+                <label for="" class="labels">Select gender:</label>
+                <input type="radio" name="gender" value="male" /> Male
+                <input type="radio" name="gender" value="female" /> Female
+            </div>
+            <br>
+            <div>
+                <label for="" class="labels">Select hobbies:</label>
+
+                <input type="checkbox" name="hobbies" value="reading" /> reading
+                <input type="checkbox" name="hobbies" value="writing" /> writing
+                <input type="checkbox" name="hobbies" value="music" /> music
+                <input type="checkbox" name="hobbies" value="sports" /> sports
+                <input type="checkbox" name="hobbies" value="coding" checked /> coding
+
+            </div>
+            <br>
+            <div>
+                <label for="" class="labels">Select city:</label>
+                <select name="" id="">
+                    <option disabled selected>select from below</option>
+                    <option value="delhi">delhi</option>
+                    <option value="chandigarh">chandigarh</option>
+                    <option value="gurugram">gurugram</option>
+                    <option value="mathura">mathura</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="" class="labels">Enter Mobile:</label>
+                <input type="number" placeholder="Enter your mobile no" name="mobile" required />
+            </div>
+            <br>
+            <div>
+                <label for="" class="labels">Select DOB:</label>
+                <input type="date" placeholder="Enter your date of birth" name="DOB" />
+            </div>
+            <br>
+            <div>
+                <label for="" class="labels">Select DOT:</label>
+                <input type="time" name="DOT" />
+            </div>
+            <br>
+            <div id="btn">
+                <input type="submit" />
+                <input type="reset" />
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
