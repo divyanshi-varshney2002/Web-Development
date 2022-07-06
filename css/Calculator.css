@@ -1,3 +1,9 @@
+body{
+    background:linear-gradient(pink,yellow,lightblue,rgb(135, 208, 135),gray) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .calculator {
     padding: 8px;
     border-radius: 3%;
