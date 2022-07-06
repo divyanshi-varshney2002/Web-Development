@@ -1,5 +1,13 @@
 body{
-    background:linear-gradient(pink,yellow,lightblue,rgb(135, 208, 135),gray) ;
+    background-image: linear-gradient(
+          to top right,
+          green,
+          rgb(135, 208, 135),
+          lightblue,
+          pink,
+          orange,
+          deeppink
+        );
     display: flex;
     justify-content: center;
     align-items: center;
