@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firebase</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: yellowgreen;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .container {
+        width: 600px;
+        height: 420px;
+        background-color: aliceblue;
+        border-radius: 50px;
+        padding: 20px;
+        text-align: center;
+      }
+      h1{
+        text-align: center;
+        padding: 20px;
+      }
+      .container .form {
+        margin: 30px;
+      }
+      input,
+      select {
+        width: 300px;
+        padding: 5px;
+      }
+      .btns {
+        display: flex;
+        justify-content: center;
+      }
+
+      .btn {
+        width: 70px;
+        padding: 10px;
+        margin: 10px;
+        font-size: 16px;
+        background-color: yellowgreen;
+        color: white;
+        border: none;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>CRUD Firebase</h1>
+      <hr />
+      <div class="form">
+        <form action="">
+          RollNo: <input type="text" id="rollBox" /> <br /><br />
+          Name: &nbsp;&nbsp;<input type="text" id="nameBox" /> <br /><br />
+          Gender:
+          <select name="" id="genBox">
+            <option disabled selected>Select Choice</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Others">Others</option>
+          </select>
+          <br /><br />
+          Address: <input type="text" id="addBox" /> <br /><br />
+          <div class="btns">
+            <button class="btn">Insert</button>
+            <button class="btn">Read</button>
+            <button class="btn">Update</button>
+            <button class="btn">Delete</button>
+          </div>
+          <a href="../html/user.html" >List of Users</a>
+        </form>
+      </div>
+    </div>
+     <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyCPigxD-56j09IWR25siHrkiDbRRL6kTc4",
+        authDomain: "fir-webapp-cbcc8.firebaseapp.com",
+        databaseURL: "https://fir-webapp-cbcc8-default-rtdb.firebaseio.com",
+        projectId: "fir-webapp-cbcc8",
+        storageBucket: "fir-webapp-cbcc8.appspot.com",
+        messagingSenderId: "832654781571",
+        appId: "1:832654781571:web:e420aeb324810a97bfffb6"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+    </script>
+    <script type="module" src="../js/FireBase.js"></script>
+  </body>
+</html>
