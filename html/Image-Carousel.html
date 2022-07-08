@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: gray;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            border: solid white 10px;
+            width: 600px;
+            height: 350px;
+            position: relative;
+        }
+        .prev{
+            position: absolute;
+            top: 45%;
+            font-weight: bold;
+            font-size: 25px;
+            color: white;
+            left: 20px;
+        }
+        .next{
+            position: absolute;
+            top: 45%;
+            font-weight: bold;
+            font-size: 25px;
+            color: white;
+            right: 20px;
+        }
+        .nav-btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.453);
+            transition: 1s;
+            z-index: 1;
+        }
+        .nav-btn:hover{
+            background-color: white;
+            color: black;
+        }
+        .carousel-container img{
+            width: 580px;
+            height: 330px;
+        }
+        .item{
+            position: absolute;
+            display: none;
+        }
+        .main{
+            display: block;
+        }
+        .caption{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <div class="prev nav-btn"><</div>
+            <div class="next nav-btn">></div>
+            <div class="carousel-container">
+                <div class="item main">
+                    <img src="../image/pexels-bob-clark-21492.jpg" alt="Image-1">
+                    <div class="caption">Image-1</div>
+                </div>
+                <div class="item">
+                    <img src="../image/pexels-gabriela-palai-507410.jpg" alt="Image-2">
+                    <div class="caption">Image-2</div>
+                </div>
+                <div class="item">
+                    <img src="../image/pexels-quintin-gellar-313782.jpg" alt="Image-3">
+                    <div class="caption">Image-3</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var prev=document.querySelector(".prev");
+        var next=document.querySelector(".next");
+        var images=document.querySelector(".carousel-container").children;
+        totalImages=images.length;
+
+        var index=0;
+        prev.addEventListener('click',()=>{
+            nextImage("prev");
+        })
+        next.addEventListener('click',()=>{
+            nextImage("next");
+        })
+        function nextImage(direction){
+            if(direction=="next"){
+                index++;
+                if(index==totalImages){
+                    index=0;
+                }
+            }else{
+                if(index==0){
+                    index=totalImages-1;
+                }else{
+                    index--;
+                }
+            }
+            for(let  i=0;i<totalImages;i++){
+                images[i].classList.remove("main");
+            }
+            images[index].classList.add("main");
+        }
+        function autoMove(){
+        setInterval(()=>{
+            nextImage("next");
+        },3000);
+        }
+        // window.onload=autoMove;
+    </script>
+</body>
+</html>

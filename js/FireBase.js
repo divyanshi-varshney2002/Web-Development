@@ -38,7 +38,7 @@ function insertData(event) {
         alert("Data Stored Successfully");
       })
       .catch((error) => {
-        alert("Unsccussful", error);
+        alert("Unsuccessful", error);
       });
 
     clearFormData();
@@ -63,7 +63,7 @@ function readData(event) {
       }
     })
     .catch((error) => {
-      alert("Unsccussful", error);
+      alert("Unsuccessful", error);
     });
 }
 function updateData(event) {
@@ -80,7 +80,7 @@ function updateData(event) {
       alert("Data Updated Successfully");
     })
     .catch((error) => {
-      alert("Unsccussful", error);
+      alert("Unscucessful", error);
     });
 
   clearFormData();
@@ -98,7 +98,7 @@ function deleteData(event) {
           alert("Data Deleted Successfully");
         })
         .catch((error) => {
-          alert("Unsccussful", error);
+          alert("Unsuccessful", error);
         });
     }
 
