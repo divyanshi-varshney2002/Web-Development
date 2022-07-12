@@ -8,13 +8,7 @@
     <title>Calculator</title>
     <style>
         body {
-            background-image: linear-gradient(to top right,
-                    green,
-                    rgb(135, 208, 135),
-                    lightblue,
-                    pink,
-                    orange,
-                    deeppink);
+            background-color: rgba(223, 154, 154, 0.784);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -51,13 +45,18 @@
             width: 100%;
             border-radius: 8%;
             height: 70%;
+            cursor: pointer;
         }
 
         .button:active {
-            background: red;
+            background-color: rgb(233,30,99);
         }
         #zero{
             padding: 0%;
+        }
+        .op{
+            background-color: rgb(66,66,66);
+            border-radius: 20px;
         }
     </style>
 </head>
@@ -70,12 +69,18 @@
             </td>
         </tr>
         <tr>
-            <td colspan="2">
-                <input class="button" type="button" value="C" onclick="clearScreen()" />
+            <td>
+                <input class="button op" type="button" value="C" onclick="clearScreen()" />
             </td>
-            <td colspan="2">
-                <input class="button" type="button" value="=" onclick="calculate()" />
+            <td>
+                <input class="button op" type="button" value="D" onclick="remove()" />
             </td>
+            <td>
+                <input class="button op" type="button" value="+" onclick="display('+')" />
+            </td>
+            <td>
+                <input class="button op" type="button" value="-" onclick="display('-')" />
+            </td>            
         </tr>
         <tr>
             <td>
@@ -88,8 +93,8 @@
                 <input class="button" type="button" value="3" onclick="display('3')" />
             </td>
             <td>
-                <input class="button" type="button" value="+" onclick="display('+')" />
-            </td>
+                <input class="button op" type="button" value="*" onclick="display('*')" />
+            </td>            
         </tr>
         <tr>
             <td>
@@ -102,7 +107,7 @@
                 <input class="button" type="button" value="6" onclick="display('6')" />
             </td>
             <td>
-                <input class="button" type="button" value="-" onclick="display('-')" />
+                <input class="button op" type="button" value="/" onclick="display('/')" />
             </td>
         </tr>
         <tr>
@@ -116,8 +121,8 @@
                 <input class="button" type="button" value="9" onclick="display('9')" />
             </td>
             <td>
-                <input class="button" type="button" value="*" onclick="display('*')" />
-            </td>
+                <input class="button op" type="button" value="." onclick="display('.')" />
+            </td>   
         </tr>
         <tr>
             <td>
@@ -126,11 +131,8 @@
             <td>
                 <input class="button" type="button" value="0" onclick="display('0')" />
             </td>
-            <td>
-                <input class="button" type="button" value="." onclick="display('.')" />
-            </td>
-            <td>
-                <input class="button" type="button" value="/" onclick="display('/')" />
+            <td colspan="2">
+                <input class="button" style="background-color:rgba(7, 7, 7, 0.699) ;" type="button" value="=" onclick="calculate()" />
             </td>
         </tr>
     </table>
@@ -140,6 +142,9 @@
         }
         function display(value) {
             document.getElementById("result").value += value;
+        }
+        function remove(){
+            document.getElementById("result").value=document.getElementById("result").value.slice(0,-1);
         }
         function calculate() {
             var p = document.getElementById("result").value;
