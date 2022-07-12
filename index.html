@@ -6,12 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Main Webpage</title>
     <style>
+      *{
+        margin: 0;
+        box-sizing: border-box;
+      }
        header {
-        background:linear-gradient(pink,yellow,lightblue,rgb(135, 208, 135),gray);
+        background-image: url("image/background.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      a{
+        text-decoration: solid;
+        font-weight: bolder;
+        color: rgb(160, 31, 74);
       }
         h2{
             text-align: center;
-            color: brown;
+            color: black;
             font-family: Arial, Helvetica, sans-serif;
         }
         h5{
@@ -24,7 +35,7 @@
     <header>
         <h2><u>Web Development Programs</u></h2>
       <nav>
-        <ul>
+        <ul type="square">
           <li><a href="./html/HTML Basic Structure.html" target="_blank">HTML Basic Structure</a></li>
           <li><a href="./html/API.html" target="_blank">Covid Cases Update </a></li>
           <li><a href="./html/Form.html" target="_blank">Student Registration Form</a></li>
