@@ -7,83 +7,144 @@
     <title>Good Vibes Form</title>
     <style>
       * {
-        margin: 0;
         padding: 0;
+        margin: 0;
         box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
       }
       body {
         background-color: lightblue;
-        font-family: Arial, Helvetica, sans-serif;
+        height: 100vh;
       }
-      h1,h3 {
-        margin: 20px;
+      h1,
+      h3 {
+        margin: 10px;
         text-align: center;
       }
       .container {
         width: 60%;
-        text-align: center;
-        border-radius: 50px;
-        background: whitesmoke;
+        height: 80%;
+        background-color: whitesmoke;
         margin: auto;
-        padding: 50px;
+        border-radius: 20px;
+        padding: 100px;
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
         flex-direction: column;
       }
-      div{margin: 10px;}
-      /* label{
-        width: 50%;
+      .d {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 10px;
+      }
+      label {
+        width: 49%;
         text-align: right;
-      } */
-      /* input{
-        width: 50%;
+      }
+      input[type="text"],
+      [type="number"],
+      select,
+      .option,
+      .emotions {
         padding: 3px;
-      } */
+        width: 49%;
+      }
+      .btn {
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+      }
+      .des {
+        height: 50px;
+      }
+      input[type="submit"] {
+        height: 40px;
+        width: 100px;
+        border-radius: 10px;
+        font-size: large;
+        background-color: cornflowerblue;
+        border: none;
+        color: white;
+      }
     </style>
   </head>
+
   <body>
     <h1>Good Vibes Form</h1>
-      <form action="" class="container">
-      <h3>Tell us something positive that happened to you today.</h3>
-      
-        <div>
-          <label class="labels">Name</label>
-          <input type="text" placeholder="Enter your name" name="name" />
-        </div>
-        <div>
-            <label class="labels">Email</label>
-            <input type="text" placeholder="Enter your email address" name="email" />
-        </div>
-        <div>
-            <label class="labels">On a scale of 1-10, how good was it?</label>
-            <input type="text" placeholder="Enter a number between 1 and 10" name="scale" />
-        </div>
-        <div>
-            <label for="" class="labels">Where did it happen?</label>
-            <select name="place" id="">
-                <option value="home">At home</option>
-                <option value="office">At Office</option>
-                <option value="college">At college</option>
-                <option value="Market">In Market</option>
-                <option value="Hotel">In Hotel</option>
-            </select>
-        </div>
-        <div>
-            <label for="" class="labels">At what time of day did it happen?</label>
-            <div><input type="radio" name="time" value="Morning" /> Morning </div>
-            <div><input type="radio" name="time" value="Afternoon" /> Afternoon </div>
-            <div><input type="radio" name="time" value="Evening" /> Evening</div>
-            </div>
-        <div>
-          <label for="" class="labels">Select hobbies:</label>
-          <div><input type="checkbox" name="hobbies" value="reading" /> reading</div>
-          <div><input type="checkbox" name="hobbies" value="writing" /> writing</div>
-          <div><input type="checkbox" name="hobbies" value="music" /> music</div>
-          <div><input type="checkbox" name="hobbies" value="sports" /> sports</div>
-          <div><input type="checkbox" name="hobbies" value="coding" /> coding</div>
+    <form action="" class="container">
+      <h3>Tell us something good that happened to you today</h3>
+      <div class="d name">
+        <label for="name">Name</label>
+        <input type="text" name="name" placeholder="Enter your name" />
       </div>
-      </form>
-    </div>
+      <div class="d email">
+        <label for="email">Email</label>
+        <input
+          type="text"
+          name="email"
+          placeholder="Enter your email address"
+        />
+      </div>
+      <div class="d goodness">
+        <label for="number">On a scale of 1-10,how good was it?</label>
+        <input
+          type="number"
+          name="number"
+          placeholder="Enter a number between 1 and 10"
+        />
+      </div>
+      <div class="d place">
+        <label for="place">Where did it happen?</label>
+        <select name="place">
+          <option value="home" selected>At home</option>
+          <option value="college">At college</option>
+          <option value="other">other</option>
+        </select>
+      </div>
+      <div class="d time">
+        <label for="time">At what time of day did it happen?</label>
+        <div class="option">
+          <div class="opt"><input type="radio" name="time" id="" />Morning</div>
+          <div class="opt">
+            <input type="radio" name="time" id="" />Afternoon
+          </div>
+          <div class="opt"><input type="radio" name="time" id="" />Evening</div>
+        </div>
+      </div>
+      <div class="d emotion">
+        <label for="emotion">What emotions did you experience?<br>(Select All that apply)</label>
+        <div class="emotions">
+          <div class="emo">
+            <input type="checkbox" name="emotion" id="" />Excited
+          </div>
+          <div class="emo">
+            <input type="checkbox" name="emotion" id="" />Humbled
+          </div>
+          <div class="emo">
+            <input type="checkbox" name="emotion" id="" />Elated
+          </div>
+          <div class="emo">
+            <input type="checkbox" name="emotion" id="" />Loved
+          </div>
+          <div class="emo">
+            <input type="checkbox" name="emotion" id="" />Enthusiastic
+          </div>
+        </div>
+      </div>
+      <div class="d describe">
+        <label for="describe">Please describe your positive experience. </label>
+        <input
+          type="text"
+          name="describe"
+          placeholder="Enter your experience here..."
+          class="des"
+        />
+      </div>
+      <div class="d btn">
+        <input type="submit" />
+      </div>
+    </form>
   </body>
 </html>
