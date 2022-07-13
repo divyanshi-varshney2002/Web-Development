@@ -16,13 +16,12 @@
         background-color: lightblue;
         height: 100vh;
       }
-      h1,
-      h3 {
+      h1,h3 {
         margin: 10px;
         text-align: center;
       }
       .container {
-        width: 60%;
+        width: 48%;
         height: 80%;
         background-color: whitesmoke;
         margin: auto;
@@ -33,7 +32,7 @@
         align-items: center;
         flex-direction: column;
       }
-      .d {
+      .main {
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -43,11 +42,7 @@
         width: 49%;
         text-align: right;
       }
-      input[type="text"],
-      [type="number"],
-      select,
-      .option,
-      .emotions {
+      input[type="text"],[type="number"],select,.option,.emotions {
         padding: 3px;
         width: 49%;
       }
@@ -72,77 +67,63 @@
   </head>
 
   <body>
-    <h1>Good Vibes Form</h1>
+    <h1>Good Vibes Form</h1> 
     <form action="" class="container">
       <h3>Tell us something good that happened to you today</h3>
-      <div class="d name">
+      <div class="main name">
         <label for="name">Name</label>
         <input type="text" name="name" placeholder="Enter your name" />
       </div>
-      <div class="d email">
+      <div class="main email">
         <label for="email">Email</label>
-        <input
-          type="text"
-          name="email"
-          placeholder="Enter your email address"
-        />
+        <input type="text" name="email" placeholder="Enter your email address"/>
       </div>
-      <div class="d goodness">
+      <div class="main goodness">
         <label for="number">On a scale of 1-10,how good was it?</label>
-        <input
-          type="number"
-          name="number"
-          placeholder="Enter a number between 1 and 10"
-        />
+        <input type="number" name="number" placeholder="Enter a number between 1 and 10"/>
       </div>
-      <div class="d place">
+      <div class="main place">
         <label for="place">Where did it happen?</label>
         <select name="place">
           <option value="home" selected>At home</option>
+          <option value="office" selected>At office</option>
           <option value="college">At college</option>
-          <option value="other">other</option>
+          <option value="market">At market</option>
         </select>
       </div>
-      <div class="d time">
+      <div class="main time">
         <label for="time">At what time of day did it happen?</label>
         <div class="option">
-          <div class="opt"><input type="radio" name="time" id="" />Morning</div>
-          <div class="opt">
-            <input type="radio" name="time" id="" />Afternoon
-          </div>
-          <div class="opt"><input type="radio" name="time" id="" />Evening</div>
+          <div class="opt"><input type="radio" name="time"/>Morning</div>
+          <div class="opt"><input type="radio" name="time"/>Afternoon</div>
+          <div class="opt"><input type="radio" name="time"/>Evening</div>
         </div>
       </div>
-      <div class="d emotion">
+      <div class="main emotion">
         <label for="emotion">What emotions did you experience?<br>(Select All that apply)</label>
         <div class="emotions">
           <div class="emo">
-            <input type="checkbox" name="emotion" id="" />Excited
+            <input type="checkbox" name="emotion"/>Excited
           </div>
           <div class="emo">
-            <input type="checkbox" name="emotion" id="" />Humbled
+            <input type="checkbox" name="emotion"/>Humbled
           </div>
           <div class="emo">
-            <input type="checkbox" name="emotion" id="" />Elated
+            <input type="checkbox" name="emotion"/>Elated
           </div>
           <div class="emo">
-            <input type="checkbox" name="emotion" id="" />Loved
+            <input type="checkbox" name="emotion"/>Loved
           </div>
           <div class="emo">
-            <input type="checkbox" name="emotion" id="" />Enthusiastic
+            <input type="checkbox" name="emotion"/>Enthusiastic
           </div>
         </div>
       </div>
-      <div class="d describe">
-        <label for="describe">Please describe your positive experience. </label>
-        <input
-          type="text"
-          name="describe"
-          placeholder="Enter your experience here..."
-          class="des"
-        />
+      <div class="main describe">
+        <label for="describe">Please describe your positive experience</label>
+        <textarea name="describe" id="" class="des" cols="36" rows="10">Enter your experience here...</textarea>
       </div>
-      <div class="d btn">
+      <div class="main btn">
         <input type="submit" />
       </div>
     </form>
