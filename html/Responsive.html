@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+      }
+      #side {
+        width: 100%;
+        display: none;
+        position: fixed;
+        top: 0;
+        background-color: darkslategrey;
+      }
+      @keyframes side {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+      @keyframes side2 {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+      #side li {
+        text-align: center;
+        padding: 20px;
+        color: white;
+        font-size: xx-large;
+        list-style-type: none;
+      }
+      .cross {
+        padding: 20px;
+        text-align: right;
+        color: white;
+        font-size: xx-large;
+      }
+      #side a {
+        color: white;
+        text-decoration: none;
+      }
+      #nav ul {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      #nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 20px;
+      }
+      #nav li {
+        border: 0px;
+        margin: 20px;
+        border-style: solid;
+        display: inline;
+        font-size: xx-large;
+        text-align: center;
+      }
+      #nav a:hover {
+        background-color: white;
+        color: black;
+      }
+      #nav {
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        background-color: gray;
+      }
+      .bar {
+        width: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        margin: 20px;
+      }
+      .fa-bars {
+        font-size: xx-large;
+        color: white;
+        pointer-events: none;
+      }
+      section.banner {
+        margin-top: 15px;
+        width: 100%;
+        height: 100vh;
+        background: radial-gradient(pink, yellow, lightblue, orange);
+        display: flex;
+        justify-content: center;
+        font-size: 40px;
+        color: white;
+        line-height: 100vh;
+      }
+
+      #sec1 {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      #sec1 .circle {
+        width: 300px;
+        height: 300px;
+        background-color: orange;
+        margin: 40px;
+        border-radius: 50%;
+        font-size: 24px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #sec2 {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #sec2 main {
+        float: left;
+        width: 50%;
+        height: 500px;
+        background-color: burlywood;
+        color: brown;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      aside {
+        width: 48%;
+        height: 500px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: column;
+      }
+
+      aside .art {
+        width: 100%;
+        height: 150px;
+        background-color: bisque;
+        color: purple;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #sec3 {
+        display: flex;
+        justify-content: center;
+      }
+
+      #sec3 .grid {
+        width: 25%;
+        height: 400px;
+        background-color: red;
+        color: white;
+        margin: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+        box-shadow: 5px 5px 2px 8px brown;
+      }
+
+      #sec3 .grid:hover {
+        background-color: green;
+        transform: scale(1.1);
+      }
+
+      footer {
+        margin-top: 15px;
+        width: 100%;
+        height: 100px;
+        background-color: pink;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 30px;
+      }
+
+      @media screen and (max-width: 900px) {
+        #nav ul {
+          display: none;
+        }
+        #nav .bar {
+          display: flex;
+        }
+      }
+    </style>
+    <title>Template</title>
+  </head>
+  <body>
+    <nav id="side">
+      <div class="cross"><i class="fa-solid fa-xmark"></i></div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#sec1">About</a></li>
+        <li><a href="#sec2">Services</a></li>
+        <li><a href="#sec3">Blog</a></li>
+        <li><a href="#sec4">Contact</a></li>
+      </ul>
+    </nav>
+    <nav id="nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#sec1">About</a></li>
+        <li><a href="#sec2">Services</a></li>
+        <li><a href="#sec3">Blog</a></li>
+        <li><a href="#sec4">Contact</a></li>
+      </ul>
+      <div class="bar"><i class="fa-solid fa-bars"></i></div>
+    </nav>
+    <main>
+      <section class="banner">BANNER</section>
+      <h1>Section 1</h1>
+      <section id="sec1">
+        <div class="circle">Circle 1</div>
+        <div class="circle">Circle 2</div>
+        <div class="circle">Circle 3</div>
+        <div class="circle">Circle 4</div>
+      </section>
+      <h1>Section 2</h1>
+      <section id="sec2">
+        <main>Main Content</main>
+        <aside>
+          <article id="art1" class="art">Article 1</article>
+          <article id="art2" class="art">Article 2</article>
+          <article id="art3" class="art">Article 3</article>
+        </aside>
+      </section>
+      <h1>Section 3</h1>
+      <section id="sec3">
+        <div class="grid">BOX 1</div>
+        <div class="grid">BOX 2</div>
+        <div class="grid">BOX 3</div>
+        <div class="grid">BOX 4</div>
+      </section>
+    </main>
+    <footer id="sec4">Footer</footer>
+    <script>
+      document.getElementsByClassName("bar")[0].onclick = () => {
+        document.getElementById("nav").style.display = "none";
+        document.getElementById("side").style.display = "block";
+        document.getElementById("side").style.animation = "side 1s linear";
+      };
+      document.getElementsByClassName("cross")[0].onclick = () => {
+        document.getElementById("side").style.animation = "side2 1s linear";
+        setTimeout(() => {
+          document.getElementById("side").style.display = "none";
+          document.getElementById("nav").style.display = "flex";
+        }, 1000);
+      };
+    </script>
+  </body>
+</html>
